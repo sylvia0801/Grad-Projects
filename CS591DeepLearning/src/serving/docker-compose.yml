@@ -1,0 +1,19 @@
+version: "3.8"
+services: 
+    tf_serve:
+        image: phuminw/dpicnet
+        container_name: tf_serve
+        ports: 
+            - "8501:8501"
+        environment: 
+            - MODEL_NAME=dpicnet
+    dpicnet_rest:
+        image: phuminw/dpicnet_rest
+        container_name: dpicnet_rest
+        depends_on: 
+            - tf_serve
+        environment: 
+            - TFSERVE_SERVER=tf_serve
+            - TFSERVE_PORT=8501
+        ports: 
+            - "80:80"
