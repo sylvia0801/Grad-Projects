@@ -29,6 +29,6 @@ CS591 Deep Learning: DpicNet
 ```
 This project is a contributed try made to Intel Scene Classification Challenge. It 
 is a convolutional neural network structure that trains image data containing scenes
- of 6 categories: buildings, forest, glacier, mountain, sea, and street and predicts
-  given image using the trained model.
+of 6 categories: buildings, forest, glacier, mountain, sea, and street and predicts
+given image using the trained model.
 ```
